@@ -36,25 +36,13 @@ sim_df.to_csv("similarity_matrix.csv", encoding="utf-8")
 
 # set diagonal to 0 to ignore self-similarity
 np.fill_diagonal(similarity_matrix, 0.0)
+similarity_matrix[similarity_matrix >= 0.9999] = 0.0
 
-pairs = []
-n = len(names)
+# find most similar pair (max value in matrix)
+i, j = np.unravel_index(np.argmax(similarity_matrix), similarity_matrix.shape)
+best_sim = similarity_matrix[i, j]
 
-for a in range(n):
-    for b in range(a + 1, n):
-        pairs.append((similarity_matrix[a, b], a, b))
-
-pairs_sorted = sorted(pairs, reverse=True)
-
-first_diff = None
-for sim, a, b in pairs_sorted:
-    if sim < 0.9999: 
-        first_diff = (sim, a, b)
-        break
-
-print("\nPereche cu similaritate mare:")
-if first_diff:
-    sim, a, b = first_diff
-    print(f"- {names[a]}  <->  {names[b]}   sim = {sim:.4f}")
-else:
-    print("Nu exista perechi cu similarity < 1.00.")
+print("Most similar products:")
+print(f"  Product 1: {names[i]}")
+print(f"  Product 2: {names[j]}")
+print(f"  Cosine similarity: {best_sim:.4f}")
