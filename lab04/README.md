@@ -14,6 +14,7 @@ Ca sa rezolv aceste probleme, ignor valorile de 1.00 din matricea de similaritat
 ### Exemplu similaritate:
 
 1. Illooms Air Filled Dino
+
    © 2018 Seatriever International Holdings Limited.
    24h LED
    Information
@@ -47,6 +48,7 @@ Ca sa rezolv aceste probleme, ignor valorile de 1.00 din matricea de similaritat
    WARNING WARNING: CHOKING HAZARD - Small parts Not for children under 3 years. WARNING! CHOKING HAZARD - Small parts. Not suitable for children under three years. Contains non-replaceable battery.
 
 2. Illooms Air Filled Unicorn
+
    © 2018 Seatriever International Holdings Limited.
    24h LED
    Information
